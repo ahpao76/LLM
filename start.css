@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ececeb, #35373b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/666.jpeg');
+    background-size: cover;
+    background-blend-mode: overlay; /* 混合圖片和背景顏色 */
+  }
+
+   
+  /* 登入容器 */
+  .start-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 登入框樣式 */
+  .start-box {
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明白色背景 */
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 700px;
+  }
+
+  .logo-container {
+    margin-bottom: 2px;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  /* LOGO樣式 */
+  .logo {
+    font-size: 8px;
+    font-weight: bold;
+    color: #4d91f7;
+    width: 30%;
+    height: 30%;
+    animation: float 5s ease-in-out infinite; /* 讓漂浮更緩慢 */
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-17px); /* 增加位移範圍 */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  
+  
+  /* 登入按鈕 */
+  .start-button {
+    background-color: #202020;
+    color: rgb(247, 243, 243);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .start-button:hover {
+    background-color: #494949;
+  }

@@ -1,0 +1,172 @@
+/* 基本樣式設置 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* 背景照片 */
+  body {
+    background-image: url('img/666.jpeg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: 70%;
+    margin: 10;
+  }
+  
+  /* 橫幅的樣式 */
+  .navbar {
+    width: 100%;
+    background: linear-gradient(135deg, #f7f7f5, #27292c);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  .navbar img {
+    height: 55px;
+    margin-left: 10px;
+    margin-right: auto;
+    width: 40%; 
+    max-width: 145px;
+    height: auto;
+  }
+
+  fieldset {
+    border-radius: 10px; /* 設定圓角半徑，數值越大圓角越大 */
+    border: 3px solid #ccc; /* 設定邊框樣式 */
+    padding: 10px; /* 內距，確保內容不緊貼邊框 */
+    background-color: rgba(0, 0, 0, 0); /* 可選：設定背景顏色 */
+  }
+  
+  
+  /* 調整 chat-container 下移以避免被橫幅覆蓋 */
+  .main-title {
+    margin-top: 70px; /* 確保內容不會被橫幅遮住 */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: bold;
+    font-size: 23px;
+    color: #333;
+  }
+  
+  .chat-container {
+    width: 1200px;
+    height: 800px;
+    border-radius: 15px; /* 提升圓角設計 */
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.9); /* 更柔和的陰影 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.95); /* 背景更透明 */
+    padding: 10px; /* 內距離 */
+  }
+  
+  .chat-box {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .message {
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 0 0 0 10px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #091409;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 10px 0;
+    transition: background-color 0.3s ease; /* 添加平滑的hover效果 */
+  }
+  
+  button:hover {
+    background-color: #3b373a;
+  }
+  
+  /* 用戶消息靠右對齊 */
+  .user-message p {
+    background-color: #fcfffd;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 50%;
+    margin-left: auto;
+    border: 1px solid #2c1f1f;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%); /* 從右側滑入 */
+      opacity: 0; /* 開始透明 */
+    }
+    100% {
+      transform: translateX(0); /* 到達最終位置 */
+      opacity: 1; /* 完全可見 */
+    }
+  }
+  
+  .user-message {
+    animation: slideIn 0.5s ease-out; /* 設置動畫效果 */
+  }
+  
+  .bot-message p {
+    background-color: #e9e8e8;
+    font-weight: 450;
+    padding: 10px;
+    border-radius: 7px;
+    max-width: 50%;
+    margin-right: auto;
+  }
+  
+  /* 額外改進：返回頂部按鈕樣式 */
+  #back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #27292c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none; /* 預設隱藏 */
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  #back-to-top-btn:hover {
+    background-color: #3b373a;
+  }
+  
+  /* 滾動出現按鈕 */
+  body.scrolled #back-to-top-btn {
+    display: flex;
+  }

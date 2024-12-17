@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Interface</title>
+  <link rel="stylesheet" href="INDEX.CSS">
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="img\榮總導覽列.png" alt="Logo" id="navbar-logo">
+    </div>
+
+    <div class="main-title">
+        <fieldset class="chat-fieldset">
+            <legend class="chat-legend">問答機器人</legend>
+
+            <!-- 聊天容器 -->
+            <div class="chat-container">
+                <!-- 回應欄 -->
+                <div class="chat-box" id="chat-box">
+                    <div class="message bot-message">
+                        <p>您好，請問我可以如何幫助您？</p>
+                    </div>
+                </div>  
+
+                <!-- 輸入框 -->
+                <div class="input-box">
+                    <input type="text" id="user-input" placeholder="輸入訊息" />
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <script src="INDEX.JS"></script>
+</body>
+</html>
+
+<!-- 添加的浮動返回頂部按鈕 -->
+<button id="back-to-top-btn" title="返回頂部">↑</button>
